@@ -234,12 +234,9 @@ numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
 print(numbers.count(1))   # 2
 print(numbers.count(5))   # 2
 
-# index — first index of value
-print(numbers.index(4))   # 2
+# index — first index of value or where value exist in the list.
+print(numbers.index(4))   # 2   (value found at position : 2)
 print(numbers.index(5))   # 4  (first occurrence only)
-
-# index with start and end bounds
-print(numbers.index(5, 5, 10))  # 8  (search from index 5 to 10)
 
 # sort — sorts in place (modifies original)
 numbers.sort()
@@ -248,14 +245,14 @@ print(numbers)  # [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
 numbers.sort(reverse=True)
 print(numbers)  # [9, 6, 5, 5, 4, 3, 3, 2, 1, 1]
 
-# reverse — reverses in place
+# reverse() — reverses in place
 numbers.reverse()
 print(numbers)
 
-# copy — shallow copy
+# copy() — copy into new list value
 original = [1, 2, 3]
-copy = original.copy()
-copy.append(4)
+copy = original.copy()   # Copies value from original into copy []
+copy.append(4)    # adds value in new list = copy []
 print(original)  # [1, 2, 3]  — unchanged
 print(copy)      # [1, 2, 3, 4]
 ```
