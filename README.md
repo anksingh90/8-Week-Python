@@ -14,7 +14,7 @@ This tutorial covers essential Python programming concepts, starting from fundam
    - List methods and operations
    - List comprehensions
    
-2. **Tuples** - Master immutable sequences
+2. [**Tuples**](./python_tuples_tutorial.md) - Master immutable sequences
    - Creating and using tuples
    - Tuple unpacking
    - When to use tuples vs lists
