@@ -9,7 +9,7 @@ This tutorial covers essential Python programming concepts, starting from fundam
 ## 📅 Course Structure
 
 ### **Week 1: Python Data Structures**
-1. 1. [**Lists**](./python_lists_tutorial.md) - Learn about ordered, mutable collections
+1. [**Lists**](./python_lists_tutorial.md) - Learn about ordered, mutable collections
    - Creating and manipulating lists
    - List methods and operations
    - List comprehensions
