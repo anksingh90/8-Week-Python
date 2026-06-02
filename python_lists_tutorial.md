@@ -171,6 +171,14 @@ print(numbers)  # [1, 4, 5]
 
 ### Adding Elements
 
+Extract a portion of a list using `[start:stop:step]`.
+
+- `append` — add one item at end : `[list_name.append (new_value)]`
+- `insert` — add at specific index : `[list_name.insert(pos, "new_value")]`
+- `extend` — add all items from another iterable : `[list_name.extend(["new_value 1", "new_value 2"])]`
+- `+ operator` — creates a new list : `new_list = old_list + ["new_value 1", "new_value 2"]`
+- `+= operator` — operator updates the original list directly in memory rather than creating a brand-new list : `fruits += ["new_value 1"]`
+
 ```python
 fruits = ["apple", "banana"]
 
