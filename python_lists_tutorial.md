@@ -329,12 +329,29 @@ for fruit, price in zip(fruits, prices):
 ## Practice Questions
 
 1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 days immediately following it.
-
 Q : Write a function `find_anomalies(temps)` that returns a list of tuples containing `(index, temperature)` for every anomaly found.
-
 `temps = [20, 22, 21, 24, 35, 23, 22, 24, 25, 20, 19, 30, 21, 22, 20]`
 
 `# Output: [(4, 35), (11, 30)]`
+
+2. Student Marks Analyzer : 
+Write a Python program that takes a list of student marks and performs the following tasks : 
+- Remove all invalid marks (less than 0 or greater than 100)
+- Find the highest and lowest marks using indexing / negative indexing
+- Sort the valid marks in descending order
+- Print the top 3 marks using slicing
+- Check whether a given target mark exists in the list
+
+3. List Packing and Unpacking Challenge : 
+Write a Python program to handle a list of employee details where each employee is stored as a list like `[id, name, age, salary]`.
+The program should : 
+
+- Unpack each employee record into separate variables
+- Store employees with salary above a given limit in a new list
+- Sort the filtered list by salary
+- Extract only the employee names using list comprehension
+- Search for a particular employee ID in the list
+
 
 ---
 
