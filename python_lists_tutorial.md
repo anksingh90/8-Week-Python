@@ -333,6 +333,7 @@ for fruit, price in zip(fruits, prices):
 Q : Write a function `find_anomalies(temps)` that returns a list of tuples containing `(index, temperature)` for every anomaly found.
 
 `temps = [20, 22, 21, 24, 35, 23, 22, 24, 25, 20, 19, 30, 21, 22, 20]`
+
 `# Output: [(4, 35), (11, 30)]`
 
 ---
