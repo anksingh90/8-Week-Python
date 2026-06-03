@@ -706,6 +706,7 @@ raw_readings = [15, 0, 42, 0, 8, 99, 0, 23, 56, 4, 102]
     Cleaned Data: [102, 99, 56, 42, 23, 15, 8, 4]
     Top 3 Readings: [102, 99, 56]
 ```
+<hr>
 
 Question 2: Matrix Column Extraction & Mutation
 
@@ -737,6 +738,38 @@ Modified Matrix:
 [42, 88, 99]
 [5, 42, 7]
 [9, 99, 1]
+```
+
+<hr>
+
+Question 3: Multi-Criteria Leaderboard
+
+Topics Covered: Sorting with Custom Keys (Sec 12), Reversing (Sec 12), Nested Lists (Sec 10).
+Scenario: You are building an arcade game leaderboard. The data is stored as a list of lists: `[Player Name, Score]`.
+
+Task:
+- Sort the leaderboard strictly using the `.sort()` method and a `lambda` key so that players are ranked by their Score in descending order (highest score first).
+- Tie-breaker rule: If two players have the exact same score, they must be sorted alphabetically by their Name (A to Z).
+- After the leaderboard is perfectly sorted, the arcade machine is unplugged! Use a built-in method to flip (reverse) the entire list in-place to simulate the display rendering upside down.
+
+Sample Input Data:
+** Input Data**
+```python
+leaderboard = [
+    ["Ash", 150], 
+    ["Brock", 200], 
+    ["Misty", 150], 
+    ["Gary", 300]
+]
+```
+
+** Output Data :**
+```python
+Sorted Leaderboard (Highest to Lowest, Alphabetical tie-break):
+[['Gary', 300], ['Brock', 200], ['Ash', 150], ['Misty', 150]]
+
+Upside Down Display (Reversed):
+[['Misty', 150], ['Ash', 150], ['Brock', 200], ['Gary', 300]]
 ```
 
 
