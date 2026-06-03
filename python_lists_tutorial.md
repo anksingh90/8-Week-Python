@@ -15,7 +15,6 @@
 6. [Modifying Lists](#6-modifying-lists)
 7. [List Methods](#7-list-methods)
 8. [Iterating Over Lists](#8-iterating-over-lists)
-8.1. [Practice Questions](#Practice-Questions)
 9. [List Comprehensions](#9-list-comprehensions)
 10. [Nested Lists (2D Lists)](#10-nested-lists-2d-lists)
 11. [Copying Lists](#11-copying-lists)
@@ -329,7 +328,7 @@ for fruit, price in zip(fruits, prices):
 
 ## Practice Questions
 
-1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 days immediately following it.
+1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 day[...]
 Q : Write a function `find_anomalies(temps)` that returns a list of tuples containing `(index, temperature)` for every anomaly found.
 
 ** Input :**
