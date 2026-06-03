@@ -327,7 +327,7 @@ for fruit, price in zip(fruits, prices):
 
 ---
 
-## Practice Questions
+## *Practice Questions*
 <details>
 1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 day[...]
 Q : Write a function `find_anomalies(temps)` that returns a list of tuples containing `(index, temperature)` for every anomaly found.
@@ -683,33 +683,59 @@ for n in reversed(numbers):
 
 ---
 
-**Practice Questions**
+## *Practice Questions 2*
 <details>
-    ***Question 1: The Sensor Data Cleaner***
-    Topics Covered: List Comprehensions (Sec 9), Sorting (Sec 12), Slicing (Sec 5).
-    Scenario: An IoT sensor records temperature data, but sometimes it glitches and records a 0.
-    Task:
-    Write a program that takes a list of raw sensor readings.
-    - Use a list comprehension to create a new list that excludes all 0 readings.
-    - Sort this new list in descending order (highest to lowest).
-    - Use slicing to extract and print only the top 3 highest valid readings.
+***Question 1: The Sensor Data Cleaner***
+Topics Covered: List Comprehensions (Sec 9), Sorting (Sec 12), Slicing (Sec 5).
+Scenario: An IoT sensor records temperature data, but sometimes it glitches and records a 0.
+Task:
+Write a program that takes a list of raw sensor readings.
+- Use a list comprehension to create a new list that excludes all 0 readings.
+- Sort this new list in descending order (highest to lowest).
+- Use slicing to extract and print only the top 3 highest valid readings.
+
+Sample Data : 
+** Input Data**
     
-    Sample Input Data : 
-    
-    ** Input Data :**
     ```python
     raw_readings = [15, 0, 42, 0, 8, 99, 0, 23, 56, 4, 102]
     ```
-    ** Output Data :**
+** Output Data :**
     ```python
     Cleaned Data: [102, 99, 56, 42, 23, 15, 8, 4]
     Top 3 Readings: [102, 99, 56]
     ```
+Question 2: Matrix Column Extraction & Mutation
+Topics Covered: Nested Lists (Sec 10), List Comprehensions (Sec 9), Modifying Lists (Sec 6), Sorting (Sec 12).
+Scenario: You have a 3x3 matrix representing scores in 3 different subjects across 3 different classes.
+Task:
+- Using a list comprehension, extract the 2nd column (index 1) of the matrix into a brand new 1D list.
+- Sort this extracted 1D list in ascending order.
+- Replace the entire 1st row (index 0) of the original matrix with this newly sorted list.
+- Print the extracted column and the fully modified matrix.
+
+Sample Input Data:
+** Input Data**
+```python
+matrix = [
+    [10, 88, 3],
+    [5, 42, 7],
+    [9, 99, 1]
+]
+```
+
+** Output Data :**
+```python
+Extracted 2nd Column: [88, 42, 99]
+Sorted Column: [42, 88, 99]
+
+Modified Matrix:
+[42, 88, 99]
+[5, 42, 7]
+[9, 99, 1]
+```
 
 
-    
-
-    
 </details>
 
 
