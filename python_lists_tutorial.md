@@ -352,6 +352,46 @@ Write a Python program that takes a list of student marks and performs the follo
 - Print the top 3 marks using slicing
 - Check whether a given target mark exists in the list
 
+
+** Input Data :**
+```python
+Enter marks separated by spaces:
+78 95 102 45 -5 88 67 99 120 54
+Enter the mark to search: 88
+
+```
+
+** Output :**
+```
+Original Marks:
+[78, 95, 102, 45, -5, 88, 67, 99, 120, 54]
+
+Valid Marks:
+[78, 95, 45, 88, 67, 99, 54]
+
+Highest Mark: 99
+Lowest Mark: 45
+
+Marks in Descending Order:
+[99, 95, 88, 78, 67, 54, 45]
+
+Top 3 Marks:
+[99, 95, 88]
+
+88 is present in the list.
+
+```
+
+3. List Packing and Unpacking Challenge : 
+Write a Python program to handle a list of employee details where each employee is stored as a list like `[id, name, age, salary]`.
+The program should : 
+
+- Unpack each employee record into separate variables
+- Store employees with salary above a given limit in a new list
+- Sort the filtered list by salary
+- Extract only the employee names using list comprehension
+- Search for a particular employee ID in the list
+
 ** Sample Data :**
 ```python
 
@@ -390,67 +430,6 @@ Employee Names:
 ['Rohan', 'Priya', 'Neha']
 
 Employee ID 103 Found.
-```
-
-3. List Packing and Unpacking Challenge : 
-Write a Python program to handle a list of employee details where each employee is stored as a list like `[id, name, age, salary]`.
-The program should : 
-
-- Unpack each employee record into separate variables
-- Store employees with salary above a given limit in a new list
-- Sort the filtered list by salary
-- Extract only the employee names using list comprehension
-- Search for a particular employee ID in the list
-
-** Input : **
-```python
-
-Enter number of rows: 3
-Enter number of columns: 4
-
-Enter Row 1:
-78 45 90 67
-
-Enter Row 2:
-34 88 55 40
-
-Enter Row 3:
-92 71 48 60
-
-```
-
-** Output : **
-```python
-
-Original Matrix:
-
-[78, 45, 90, 67]
-[34, 88, 55, 40]
-[92, 71, 48, 60]
-
-Row Sums:
-Row 1 = 280
-Row 2 = 217
-Row 3 = 271
-
-Column Sums:
-Column 1 = 204
-Column 2 = 204
-Column 3 = 193
-Column 4 = 167
-
-Modified Matrix:
-
-[78, 'F', 90, 67]
-['F', 88, 55, 'F']
-[92, 71, 'F', 60]
-
-Rows Reversed:
-
-[92, 71, 'F', 60]
-['F', 88, 55, 'F']
-[78, 'F', 90, 67]
-
 ```
 
 
