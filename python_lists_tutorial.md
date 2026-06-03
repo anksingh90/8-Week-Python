@@ -685,9 +685,11 @@ for n in reversed(numbers):
 
 ## *Practice Questions 2*
 <details>
-***Question 1: The Sensor Data Cleaner***
+Question 1: The Sensor Data Cleaner
+
 Topics Covered: List Comprehensions (Sec 9), Sorting (Sec 12), Slicing (Sec 5).
 Scenario: An IoT sensor records temperature data, but sometimes it glitches and records a 0.
+
 Task:
 Write a program that takes a list of raw sensor readings.
 - Use a list comprehension to create a new list that excludes all 0 readings.
@@ -696,18 +698,20 @@ Write a program that takes a list of raw sensor readings.
 
 Sample Data : 
 ** Input Data**
-    
-    ```python
-    raw_readings = [15, 0, 42, 0, 8, 99, 0, 23, 56, 4, 102]
-    ```
+```python
+raw_readings = [15, 0, 42, 0, 8, 99, 0, 23, 56, 4, 102]
+```
 ** Output Data :**
-    ```python
+```python
     Cleaned Data: [102, 99, 56, 42, 23, 15, 8, 4]
     Top 3 Readings: [102, 99, 56]
-    ```
+```
+
 Question 2: Matrix Column Extraction & Mutation
+
 Topics Covered: Nested Lists (Sec 10), List Comprehensions (Sec 9), Modifying Lists (Sec 6), Sorting (Sec 12).
 Scenario: You have a 3x3 matrix representing scores in 3 different subjects across 3 different classes.
+
 Task:
 - Using a list comprehension, extract the 2nd column (index 1) of the matrix into a brand new 1D list.
 - Sort this extracted 1D list in ascending order.
