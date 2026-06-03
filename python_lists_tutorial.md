@@ -379,6 +379,57 @@ The program should :
 - Extract only the employee names using list comprehension
 - Search for a particular employee ID in the list
 
+# Input : 
+```python
+
+Enter number of rows: 3
+Enter number of columns: 4
+
+Enter Row 1:
+78 45 90 67
+
+Enter Row 2:
+34 88 55 40
+
+Enter Row 3:
+92 71 48 60
+
+```
+
+# Output : 
+```python
+
+Original Matrix:
+
+[78, 45, 90, 67]
+[34, 88, 55, 40]
+[92, 71, 48, 60]
+
+Row Sums:
+Row 1 = 280
+Row 2 = 217
+Row 3 = 271
+
+Column Sums:
+Column 1 = 204
+Column 2 = 204
+Column 3 = 193
+Column 4 = 167
+
+Modified Matrix:
+
+[78, 'F', 90, 67]
+['F', 88, 55, 'F']
+[92, 71, 'F', 60]
+
+Rows Reversed:
+
+[92, 71, 'F', 60]
+['F', 88, 55, 'F']
+[78, 'F', 90, 67]
+
+```
+
 
 ---
 
