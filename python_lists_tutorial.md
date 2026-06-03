@@ -15,7 +15,6 @@
 6. [Modifying Lists](#6-modifying-lists)
 7. [List Methods](#7-list-methods)
 8. [Iterating Over Lists](#8-iterating-over-lists)
-
 Q. [Practice Questions](#Practice-Questions)
 9. [List Comprehensions](#9-list-comprehensions)
 10. [Nested Lists (2D Lists)](#10-nested-lists-2d-lists)
