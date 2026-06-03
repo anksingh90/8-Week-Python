@@ -334,7 +334,8 @@ Q : Write a function `find_anomalies(temps)` that returns a list of tuples conta
 
 ** Input :**
 ```python
-temps = [20, 22, 21, 24, 35, 23, 22, 24, 25, 20, 19, 30, 21, 22, 20]
+temps_1 = [20, 22, 21, 24, 35, 23, 22, 24, 25, 20, 19, 30, 21, 22, 20]
+print(find_anomalies(temps_1))
 ```
 
 ** Output :**
@@ -351,33 +352,44 @@ Write a Python program that takes a list of student marks and performs the follo
 - Print the top 3 marks using slicing
 - Check whether a given target mark exists in the list
 
-** Input :**
+** Sample Data :**
 ```python
 
-Enter marks separated by spaces:
-78 95 102 45 -5 88 67 99 120 54
-Enter the mark to search: 88
+employees = [
+    [101, "Amit", 25, 35000],
+    [102, "Priya", 30, 52000],
+    [103, "Rohan", 28, 47000],
+    [104, "Neha", 32, 60000],
+    [105, "Karan", 26, 42000]
+]
+
 ```
+** Input Data :**
+```python
+Enter minimum salary: 45000
+Enter Employee ID to search: 103
+```
+
 ** Output :**
 ```
+Employee Records:
 
-Original Marks:
-[78, 95, 102, 45, -5, 88, 67, 99, 120, 54]
+ID: 101  Name: Amit   Age: 25  Salary: 35000
+ID: 102  Name: Priya  Age: 30  Salary: 52000
+ID: 103  Name: Rohan  Age: 28  Salary: 47000
+ID: 104  Name: Neha   Age: 32  Salary: 60000
+ID: 105  Name: Karan  Age: 26  Salary: 42000
 
-Valid Marks:
-[78, 95, 45, 88, 67, 99, 54]
+Employees with Salary Above 45000:
 
-Highest Mark: 99
-Lowest Mark: 45
+[103, 'Rohan', 28, 47000]
+[102, 'Priya', 30, 52000]
+[104, 'Neha', 32, 60000]
 
-Marks in Descending Order:
-[99, 95, 88, 78, 67, 54, 45]
+Employee Names:
+['Rohan', 'Priya', 'Neha']
 
-Top 3 Marks:
-[99, 95, 88]
-
-88 is present in the list.
-
+Employee ID 103 Found.
 ```
 
 3. List Packing and Unpacking Challenge : 
