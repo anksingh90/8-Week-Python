@@ -342,14 +342,16 @@ Write a Python program that takes a list of student marks and performs the follo
 - Print the top 3 marks using slicing
 - Check whether a given target mark exists in the list
 
+** Input :
 ```python
-# Input :
 
 Enter marks separated by spaces:
 78 95 102 45 -5 88 67 99 120 54
 Enter the mark to search: 88
+```
+** Output :
+```
 
-# Output :
 Original Marks:
 [78, 95, 102, 45, -5, 88, 67, 99, 120, 54]
 
@@ -379,7 +381,7 @@ The program should :
 - Extract only the employee names using list comprehension
 - Search for a particular employee ID in the list
 
-# Input : 
+** Input : 
 ```python
 
 Enter number of rows: 3
@@ -396,7 +398,7 @@ Enter Row 3:
 
 ```
 
-# Output : 
+** Output : 
 ```python
 
 Original Matrix:
