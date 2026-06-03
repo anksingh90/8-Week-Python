@@ -502,7 +502,13 @@ List comprehensions are the Pythonic way to build lists. They replace many for-l
 
 ```python
 # Basic — square all numbers from 0 to 9
-squares = [x**2 for x in range(10)]
+
+square=[]                # Old method
+for x in range(10):
+    square.append(x**2)
+print(square)
+
+squares = [x**2 for x in range(10)]        # List comprehensions method
 print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 # With condition — even numbers only
@@ -674,6 +680,39 @@ print(numbers)  # [5, 4, 3, 2, 1]
 for n in reversed(numbers):
     print(n)
 ```
+
+---
+
+**Practice Questions**
+<details>
+    ***Question 1: The Sensor Data Cleaner***
+    Topics Covered: List Comprehensions (Sec 9), Sorting (Sec 12), Slicing (Sec 5).
+    Scenario: An IoT sensor records temperature data, but sometimes it glitches and records a 0.
+    Task:
+    Write a program that takes a list of raw sensor readings.
+    - Use a list comprehension to create a new list that excludes all 0 readings.
+    - Sort this new list in descending order (highest to lowest).
+    - Use slicing to extract and print only the top 3 highest valid readings.
+    
+    Sample Input Data : 
+    
+    ** Input Data :**
+    ```python
+    raw_readings = [15, 0, 42, 0, 8, 99, 0, 23, 56, 4, 102]
+    ```
+    ** Output Data :**
+    ```python
+    Cleaned Data: [102, 99, 56, 42, 23, 15, 8, 4]
+    Top 3 Readings: [102, 99, 56]
+    ```
+
+
+    
+
+    
+</details>
+
+
 
 ---
 
