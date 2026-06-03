@@ -342,6 +342,33 @@ Write a Python program that takes a list of student marks and performs the follo
 - Print the top 3 marks using slicing
 - Check whether a given target mark exists in the list
 
+```python
+# Input :
+
+Enter marks separated by spaces:
+78 95 102 45 -5 88 67 99 120 54
+Enter the mark to search: 88
+
+# Output :
+Original Marks:
+[78, 95, 102, 45, -5, 88, 67, 99, 120, 54]
+
+Valid Marks:
+[78, 95, 45, 88, 67, 99, 54]
+
+Highest Mark: 99
+Lowest Mark: 45
+
+Marks in Descending Order:
+[99, 95, 88, 78, 67, 54, 45]
+
+Top 3 Marks:
+[99, 95, 88]
+
+88 is present in the list.
+
+```
+
 3. List Packing and Unpacking Challenge : 
 Write a Python program to handle a list of employee details where each employee is stored as a list like `[id, name, age, salary]`.
 The program should : 
