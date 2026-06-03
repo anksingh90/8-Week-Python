@@ -432,6 +432,64 @@ Employee Names:
 Employee ID 103 Found.
 ```
 
+4. 2D List Matrix Operations : 
+Write a Python program that works with a 2D list representing a class timetable or marks table. The program should:
+
+1. Display the 2D list in matrix form
+2. Find the sum of each row
+3. Find the sum of each column
+4. Replace all values less than 50 with `"F"`
+5. Create a copy of the original matrix before modifying it
+6. Reverse the order of rows and print the updated matrix
+
+** Input Data :**
+```python
+Enter number of rows: 3
+Enter number of columns: 4
+
+Enter Row 1:
+78 45 90 67
+
+Enter Row 2:
+34 88 55 40
+
+Enter Row 3:
+92 71 48 60
+```
+
+** Output Data :**
+```python
+Original Matrix:
+
+[78, 45, 90, 67]
+[34, 88, 55, 40]
+[92, 71, 48, 60]
+
+Row Sums:
+Row 1 = 280
+Row 2 = 217
+Row 3 = 271
+
+Column Sums:
+Column 1 = 204
+Column 2 = 204
+Column 3 = 193
+Column 4 = 167
+
+Modified Matrix:
+
+[78, 'F', 90, 67]
+['F', 88, 55, 'F']
+[92, 71, 'F', 60]
+
+Rows Reversed:
+
+[92, 71, 'F', 60]
+['F', 88, 55, 'F']
+[78, 'F', 90, 67]
+```
+
+
 
 ---
 
