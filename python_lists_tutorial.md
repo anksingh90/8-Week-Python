@@ -328,7 +328,7 @@ for fruit, price in zip(fruits, prices):
 ---
 
 ## Practice Questions
-
+<details>
 1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 day[...]
 Q : Write a function `find_anomalies(temps)` that returns a list of tuples containing `(index, temperature)` for every anomaly found.
 
@@ -489,7 +489,7 @@ Rows Reversed:
 ['F', 88, 55, 'F']
 [78, 'F', 90, 67]
 ```
-
+</details>
 
 
 ---
