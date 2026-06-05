@@ -538,24 +538,22 @@ table = [(x, y, x*y) for x in range(1, 4) for y in range(1, 4)]
 for row in table:
     print(row)
 ```
-<br>
+---
+## Practice Question
+**1 : The Vowel Extractor (Basic)**
+**Concept:** Filtering and Transforming.
+**Problem Statement:** You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
 
-** Practice Question **
-1 : The Vowel Extractor (Basic)
-Concept: Filtering and Transforming.
-Problem Statement: You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
-
-Sample Input : 
+**Sample Input : **
 ```python
 letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']
 ```
-
-Output : 
+**Output : **
 ```python
 ['A', 'E', 'O', 'I', 'U']
 ```
 
-<br>
+---
 
 2: The Grading System (Intermediate)
 Concept: Conditional Expressions (if-else mapping).
