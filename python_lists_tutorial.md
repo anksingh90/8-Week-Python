@@ -538,17 +538,24 @@ table = [(x, y, x*y) for x in range(1, 4) for y in range(1, 4)]
 for row in table:
     print(row)
 ```
+<br>
 
 ** Practice Question **
 1 : The Vowel Extractor (Basic)
 Concept: Filtering and Transforming.
 Problem Statement: You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
 
-Sample Input:
-`letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']`
+Sample Input : 
+```python
+letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']
+```
 
-Expected Output:
-`Plaintext = ['A', 'E', 'O', 'I', 'U']`
+Output : 
+```python
+['A', 'E', 'O', 'I', 'U']
+```
+
+<br>
 
 2: The Grading System (Intermediate)
 Concept: Conditional Expressions (if-else mapping).
@@ -558,12 +565,40 @@ A teacher has a list of student scores out of 100. Write a single list comprehen
 If the score is 50 or above, record it as `"Pass"`.
 If the score is below 50, record it as `"Fail"`.
 
-Sample Input:
-`scores = [45, 88, 92, 33, 50, 71, 12]`
+Sample Input : 
+```python
+scores = [45, 88, 92, 33, 50, 71, 12]
+```
 
-Expected Output:
-Plaintext
-`['Fail', 'Pass', 'Pass', 'Fail', 'Pass', 'Pass', 'Fail']`
+Output : 
+```python
+['Fail', 'Pass', 'Pass', 'Fail', 'Pass', 'Pass', 'Fail']
+```
+
+<br>
+
+Question 3: The Filtered Matrix Flattener (Advanced)
+Concept: Nested Comprehensions with Filtering.
+Problem Statement:
+You are given a 2D list (matrix) containing random integers. Using a single list comprehension, flatten this matrix into a 1D list, but only include the numbers that are strictly greater than 10.
+
+Sample Input : 
+```python
+matrix = [
+    [5, 12, 8],
+    [20, 3, 15],
+    [9, 11, 4]
+]
+```
+
+
+Output : 
+```python
+[12, 20, 15, 11]
+```
+
+
+
 
 ---
 
