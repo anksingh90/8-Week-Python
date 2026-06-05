@@ -577,7 +577,7 @@ Output :
 
 <br>
 
-Question 3: The Filtered Matrix Flattener (Advanced)
+3: The Filtered Matrix Flattener (Advanced)
 Concept: Nested Comprehensions with Filtering.
 Problem Statement:
 You are given a 2D list (matrix) containing random integers. Using a single list comprehension, flatten this matrix into a 1D list, but only include the numbers that are strictly greater than 10.
