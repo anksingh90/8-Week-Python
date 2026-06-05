@@ -537,6 +537,20 @@ print(flat)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 table = [(x, y, x*y) for x in range(1, 4) for y in range(1, 4)]
 for row in table:
     print(row)
+
+Question 1: The Vowel Extractor (Basic)
+Concept: Filtering and Transforming.
+Problem Statement:
+You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
+
+Sample Input:
+letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']
+
+Expected Output:
+
+Plaintext
+['A', 'E', 'O', 'I', 'U']
+
 ```
 
 ---
