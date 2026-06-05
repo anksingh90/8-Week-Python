@@ -537,21 +537,33 @@ print(flat)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 table = [(x, y, x*y) for x in range(1, 4) for y in range(1, 4)]
 for row in table:
     print(row)
+```
 
-Question 1: The Vowel Extractor (Basic)
+** Practice Question **
+1 : The Vowel Extractor (Basic)
 Concept: Filtering and Transforming.
-Problem Statement:
-You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
+Problem Statement: You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
 
 Sample Input:
-letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']
+`letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']`
 
 Expected Output:
+`Plaintext = ['A', 'E', 'O', 'I', 'U']`
 
+2: The Grading System (Intermediate)
+Concept: Conditional Expressions (if-else mapping).
+Problem Statement:
+A teacher has a list of student scores out of 100. Write a single list comprehension that evaluates each score and creates a new list of statuses:
+
+If the score is 50 or above, record it as `"Pass"`.
+If the score is below 50, record it as `"Fail"`.
+
+Sample Input:
+`scores = [45, 88, 92, 33, 50, 71, 12]`
+
+Expected Output:
 Plaintext
-['A', 'E', 'O', 'I', 'U']
-
-```
+`['Fail', 'Pass', 'Pass', 'Fail', 'Pass', 'Pass', 'Fail']`
 
 ---
 
