@@ -15,18 +15,19 @@
 6. [Modifying Lists](#6-modifying-lists)
 7. [List Methods](#7-list-methods)
 8. [Iterating Over Lists](#8-iterating-over-lists)
-9. [List Comprehensions](#9-list-comprehensions)
-10. [Nested Lists (2D Lists)](#10-nested-lists-2d-lists)
-11. [Copying Lists](#11-copying-lists)
-12. [Sorting and Reversing](#12-sorting-and-reversing)
-13. [Searching in Lists](#13-searching-in-lists)
-14. [List Unpacking](#14-list-unpacking)
-15. [zip(), map(), filter() with Lists](#15-zip-map-filter-with-lists)
-16. [List as Stack and Queue](#16-list-as-stack-and-queue)
-17. [Memory and Performance](#17-memory-and-performance)
-18. [Common Mistakes](#18-common-mistakes)
-19. [Practice Questions — Intermediate](#19-practice-questions--intermediate)
-20. [Practice Questions — Advanced](#20-practice-questions--advanced)
+9. [Practice Questions](#practice-questions)
+10. [List Comprehensions](#9-list-comprehensions)
+11. [Nested Lists (2D Lists)](#10-nested-lists-2d-lists)
+12. [Copying Lists](#11-copying-lists)
+13. [Sorting and Reversing](#12-sorting-and-reversing)
+14. [Searching in Lists](#13-searching-in-lists)
+15. [List Unpacking](#14-list-unpacking)
+16. [zip(), map(), filter() with Lists](#15-zip-map-filter-with-lists)
+17. [List as Stack and Queue](#16-list-as-stack-and-queue)
+18. [Memory and Performance](#17-memory-and-performance)
+19. [Common Mistakes](#18-common-mistakes)
+20. [Practice Questions — Intermediate](#19-practice-questions--intermediate)
+21. [Practice Questions — Advanced](#20-practice-questions--advanced)
 
 ---
 
@@ -326,13 +327,22 @@ for fruit, price in zip(fruits, prices):
 
 ---
 
-## Practice Questions
-
-1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 days immediately following it.
+## *Practice Questions*
+<details>
+1. You are provided with a list of daily temperature readings. An `"anomaly"` is defined as a temperature that is strictly greater than the average of the 3 days immediately preceding it and the 3 day[...]
 Q : Write a function `find_anomalies(temps)` that returns a list of tuples containing `(index, temperature)` for every anomaly found.
-`temps = [20, 22, 21, 24, 35, 23, 22, 24, 25, 20, 19, 30, 21, 22, 20]`
 
-`# Output: [(4, 35), (11, 30)]`
+** Input :**
+```python
+temps_1 = [20, 22, 21, 24, 35, 23, 22, 24, 25, 20, 19, 30, 21, 22, 20]
+print(find_anomalies(temps_1))
+```
+
+** Output :**
+```python
+[(4, 35), (11, 30)]
+```
+
 
 2. Student Marks Analyzer : 
 Write a Python program that takes a list of student marks and performs the following tasks : 
@@ -341,6 +351,36 @@ Write a Python program that takes a list of student marks and performs the follo
 - Sort the valid marks in descending order
 - Print the top 3 marks using slicing
 - Check whether a given target mark exists in the list
+
+
+** Input Data :**
+```python
+Enter marks separated by spaces:
+78 95 102 45 -5 88 67 99 120 54
+Enter the mark to search: 88
+
+```
+
+** Output :**
+```
+Original Marks:
+[78, 95, 102, 45, -5, 88, 67, 99, 120, 54]
+
+Valid Marks:
+[78, 95, 45, 88, 67, 99, 54]
+
+Highest Mark: 99
+Lowest Mark: 45
+
+Marks in Descending Order:
+[99, 95, 88, 78, 67, 54, 45]
+
+Top 3 Marks:
+[99, 95, 88]
+
+88 is present in the list.
+
+```
 
 3. List Packing and Unpacking Challenge : 
 Write a Python program to handle a list of employee details where each employee is stored as a list like `[id, name, age, salary]`.
@@ -351,6 +391,105 @@ The program should :
 - Sort the filtered list by salary
 - Extract only the employee names using list comprehension
 - Search for a particular employee ID in the list
+
+** Sample Data :**
+```python
+
+employees = [
+    [101, "Amit", 25, 35000],
+    [102, "Priya", 30, 52000],
+    [103, "Rohan", 28, 47000],
+    [104, "Neha", 32, 60000],
+    [105, "Karan", 26, 42000]
+]
+
+```
+** Input Data :**
+```python
+Enter minimum salary: 45000
+Enter Employee ID to search: 103
+```
+
+** Output :**
+```
+Employee Records:
+
+ID: 101  Name: Amit   Age: 25  Salary: 35000
+ID: 102  Name: Priya  Age: 30  Salary: 52000
+ID: 103  Name: Rohan  Age: 28  Salary: 47000
+ID: 104  Name: Neha   Age: 32  Salary: 60000
+ID: 105  Name: Karan  Age: 26  Salary: 42000
+
+Employees with Salary Above 45000:
+
+[103, 'Rohan', 28, 47000]
+[102, 'Priya', 30, 52000]
+[104, 'Neha', 32, 60000]
+
+Employee Names:
+['Rohan', 'Priya', 'Neha']
+
+Employee ID 103 Found.
+```
+
+4. 2D List Matrix Operations : 
+Write a Python program that works with a 2D list representing a class timetable or marks table.
+
+The program should :-
+-  Display the 2D list in matrix form
+-  Find the sum of each row
+-  Find the sum of each column
+-  Replace all values less than 50 with `"F"`
+-  Create a copy of the original matrix before modifying it
+-  Reverse the order of rows and print the updated matrix
+
+** Input Data :**
+```python
+Enter number of rows: 3
+Enter number of columns: 4
+
+Enter Row 1:
+78 45 90 67
+
+Enter Row 2:
+34 88 55 40
+
+Enter Row 3:
+92 71 48 60
+```
+
+** Output Data :**
+```python
+Original Matrix:
+
+[78, 45, 90, 67]
+[34, 88, 55, 40]
+[92, 71, 48, 60]
+
+Row Sums:
+Row 1 = 280
+Row 2 = 217
+Row 3 = 271
+
+Column Sums:
+Column 1 = 204
+Column 2 = 204
+Column 3 = 193
+Column 4 = 167
+
+Modified Matrix:
+
+[78, 'F', 90, 67]
+['F', 88, 55, 'F']
+[92, 71, 'F', 60]
+
+Rows Reversed:
+
+[92, 71, 'F', 60]
+['F', 88, 55, 'F']
+[78, 'F', 90, 67]
+```
+</details>
 
 
 ---
@@ -363,7 +502,13 @@ List comprehensions are the Pythonic way to build lists. They replace many for-l
 
 ```python
 # Basic — square all numbers from 0 to 9
-squares = [x**2 for x in range(10)]
+
+square=[]                # Old method
+for x in range(10):
+    square.append(x**2)
+print(square)
+
+squares = [x**2 for x in range(10)]        # List comprehensions method
 print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 # With condition — even numbers only
@@ -393,6 +538,65 @@ table = [(x, y, x*y) for x in range(1, 4) for y in range(1, 4)]
 for row in table:
     print(row)
 ```
+---
+## Practice Question
+**1 : The Vowel Extractor (Basic)**
+**Concept:** Filtering and Transforming.
+**Problem Statement:** You are given a list of mixed lowercase and uppercase characters. Write a single-line list comprehension that extracts only the vowels (a, e, i, o, u) from the list, converting all of them to uppercase.
+
+**Sample Input : **
+```python
+letters = ['a', 'B', 'c', 'E', 'x', 'o', 'Z', 'i', 'p', 'U']
+```
+**Output : **
+```python
+['A', 'E', 'O', 'I', 'U']
+```
+
+---
+
+2: The Grading System (Intermediate)
+Concept: Conditional Expressions (if-else mapping).
+Problem Statement:
+A teacher has a list of student scores out of 100. Write a single list comprehension that evaluates each score and creates a new list of statuses:
+
+If the score is 50 or above, record it as `"Pass"`.
+If the score is below 50, record it as `"Fail"`.
+
+Sample Input : 
+```python
+scores = [45, 88, 92, 33, 50, 71, 12]
+```
+
+Output : 
+```python
+['Fail', 'Pass', 'Pass', 'Fail', 'Pass', 'Pass', 'Fail']
+```
+
+<br>
+
+3: The Filtered Matrix Flattener (Advanced)
+Concept: Nested Comprehensions with Filtering.
+Problem Statement:
+You are given a 2D list (matrix) containing random integers. Using a single list comprehension, flatten this matrix into a 1D list, but only include the numbers that are strictly greater than 10.
+
+Sample Input : 
+```python
+matrix = [
+    [5, 12, 8],
+    [20, 3, 15],
+    [9, 11, 4]
+]
+```
+
+
+Output : 
+```python
+[12, 20, 15, 11]
+```
+
+
+
 
 ---
 
@@ -535,6 +739,102 @@ print(numbers)  # [5, 4, 3, 2, 1]
 for n in reversed(numbers):
     print(n)
 ```
+
+---
+
+## *Practice Questions 2*
+<details>
+Question 1: The Sensor Data Cleaner
+
+Topics Covered: List Comprehensions (Sec 9), Sorting (Sec 12), Slicing (Sec 5).
+Scenario: An IoT sensor records temperature data, but sometimes it glitches and records a 0.
+
+Task:
+Write a program that takes a list of raw sensor readings.
+- Use a list comprehension to create a new list that excludes all 0 readings.
+- Sort this new list in descending order (highest to lowest).
+- Use slicing to extract and print only the top 3 highest valid readings.
+
+Sample Data : 
+** Input Data**
+```python
+raw_readings = [15, 0, 42, 0, 8, 99, 0, 23, 56, 4, 102]
+```
+** Output Data :**
+```python
+    Cleaned Data: [102, 99, 56, 42, 23, 15, 8, 4]
+    Top 3 Readings: [102, 99, 56]
+```
+<hr>
+
+Question 2: Matrix Column Extraction & Mutation
+
+Topics Covered: Nested Lists (Sec 10), List Comprehensions (Sec 9), Modifying Lists (Sec 6), Sorting (Sec 12).
+Scenario: You have a 3x3 matrix representing scores in 3 different subjects across 3 different classes.
+
+Task:
+- Using a list comprehension, extract the 2nd column (index 1) of the matrix into a brand new 1D list.
+- Sort this extracted 1D list in ascending order.
+- Replace the entire 1st row (index 0) of the original matrix with this newly sorted list.
+- Print the extracted column and the fully modified matrix.
+
+Sample Input Data:
+** Input Data**
+```python
+matrix = [
+    [10, 88, 3],
+    [5, 42, 7],
+    [9, 99, 1]
+]
+```
+
+** Output Data :**
+```python
+Extracted 2nd Column: [88, 42, 99]
+Sorted Column: [42, 88, 99]
+
+Modified Matrix:
+[42, 88, 99]
+[5, 42, 7]
+[9, 99, 1]
+```
+
+<hr>
+
+Question 3: Multi-Criteria Leaderboard
+
+Topics Covered: Sorting with Custom Keys (Sec 12), Reversing (Sec 12), Nested Lists (Sec 10).
+Scenario: You are building an arcade game leaderboard. The data is stored as a list of lists: `[Player Name, Score]`.
+
+Task:
+- Sort the leaderboard strictly using the `.sort()` method and a `lambda` key so that players are ranked by their Score in descending order (highest score first).
+- Tie-breaker rule: If two players have the exact same score, they must be sorted alphabetically by their Name (A to Z).
+- After the leaderboard is perfectly sorted, the arcade machine is unplugged! Use a built-in method to flip (reverse) the entire list in-place to simulate the display rendering upside down.
+
+Sample Input Data:
+** Input Data**
+```python
+leaderboard = [
+    ["Ash", 150], 
+    ["Brock", 200], 
+    ["Misty", 150], 
+    ["Gary", 300]
+]
+```
+
+** Output Data :**
+```python
+Sorted Leaderboard (Highest to Lowest, Alphabetical tie-break):
+[['Gary', 300], ['Brock', 200], ['Ash', 150], ['Misty', 150]]
+
+Upside Down Display (Reversed):
+[['Misty', 150], ['Ash', 150], ['Brock', 200], ['Gary', 300]]
+```
+
+
+</details>
+
+
 
 ---
 
