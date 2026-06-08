@@ -84,12 +84,13 @@ def show_alphabetical(data):
     for i in range(len(temp)):
         print(i + 1, temp[i][0])
 
-#main program
+# main program
+# add a menu to access function
 
-# show_top_scorers(scorecard)
+show_top_scorers(scorecard)
 show_strike_rate(scorecard)
-# show_boundary_hitters(scorecard)
-# show_alphabetical(scorecard)
+show_boundary_hitters(scorecard)
+show_alphabetical(scorecard)
 
 print("______Original Scorecard______")
 
