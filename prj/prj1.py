@@ -12,23 +12,21 @@ scorecard = [
 ]
 
 #view 1 - Top Scorers
-
 def show_top_scorers(data):
     temp = data.copy()  # copied list into new list
     for i in range(len(temp)):  
         print(i)
-        for j in range(i, len(temp)):   # FD :  range(i + 1, len(temp)) starting with i, it compares i with i in first round. Which is not required.
-            #print(f"Value of j : {temp[j][1]}, and i  : {temp[i][1]}") #  FD : here it shows first value of i & j which are same.
-            if temp[j][1] > temp[i][1]:
+        for j in range(i, len(temp)):       # FD :  range(i + 1, len(temp)) starting with i, it compares i with i in first round. Which is not required.
+            # print(f"Value of j : {temp[j][1]}, and i  : {temp[i][1]}") #  FD : here it shows first value of i & j which are same.
+            if temp[j][1] > temp[i][1]:     # re-write this logic with Comprehensions or reduce the comparsion code !
                 temp[i], temp[j] = temp[j], temp[i]
             elif temp[j][1] == temp[i][1]:
                 if temp[j][2] < temp[i][2]:
                     temp[i], temp[j] = temp[j], temp[i]
 
     print("_______Top Scorers______-")
-
     for i in range(len(temp)):
-        print(i + 1, temp[i][0], "| Runs:", temp[i][1], "| Balls:", temp[i][2]) # FD :   use f-string to print values
+        print(i + 1, temp[i][0], "| Runs:", temp[i][1], "| Balls:", temp[i][2])     # FD :   use f-string to print values
 
 # view 2 - Strike Rate Kings
 def show_strike_rate(data):
