@@ -1,4 +1,4 @@
-# review of the code - feedback
+# Mini-Project — The Cricket Scorecard Sorter - review of the code - feedback
 
 scorecard = [
     ["Rohit",   72, 45, 6, 3],
