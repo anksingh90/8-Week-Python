@@ -70,6 +70,8 @@ user_layer = {"debug": False, "profile": "developer"}
 
 
 ## 2. Scope of Variables
+<details> 
+<summary> Local Variable & Global Variable </summary>
 
 ### Local Variable
 
@@ -97,6 +99,7 @@ def increase():
     global count
     count += 1
 ```
+</details> 
 
 ---
 
