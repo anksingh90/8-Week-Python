@@ -113,6 +113,9 @@ Every recursive function should have :
 - ### Recursive case  – 
       where the function calls itself.
 
+<details> 
+<summary> Example 1: Factorial </summary>
+
 ### Example 1: Factorial
 
 Factorial of `n` :  
@@ -145,6 +148,7 @@ def factorial(n):
     return n * factorial(n - 1)
 ```  
 The function calls are stored in the call stack until the base case is reached.  
+</details>
 
 ---
 
@@ -158,6 +162,9 @@ The function calls are stored in the call stack until the base case is reached.
 | **Disadvantages** | • Uses more memory due to the call stack.<br>• Can be slower than loops.<br>• Too many recursive calls cause `RecursionError: maximum recursion depth exceeded`. |
 
 ---
+<details>
+<summary> Example 2: Fibonacci Series </summary>
+
 ### Example 2: Fibonacci Series
 
 - The Fibonacci Series is a sequence of numbers where each number is the sum of the previous two numbers.
@@ -165,8 +172,9 @@ Fibonacci Sequence : `0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...`
 
 Now try to solve Fibonacci series and find sum of first 5 digits.
 
-<details> 
-<summary>Fibonacci Series explanation</summary>
+---
+
+### Fibonacci Series explanation
 
 ### Method 1: Using Recursion : 
     
