@@ -12,11 +12,11 @@
 | **Passing Mechanism** | Passed as a sequence of unnamed values: `func(1, 2, 3)` | Passed as named key-value pairs: `func(a=1, b=2)` |
 | **Ordering** | Must appear **before** `**kwargs` | Must appear **after** `*args` |
 | **Empty State** | Evaluates to an empty tuple `()` | Evaluates to an empty dictionary `{}` |
-
+<!-- 
 ### Key Architectural Insights Included:
 * **The `*` and `**` Operators:** They act as *packing* mechanics when defining a function, and *unpacking* mechanics when invoking a function.
 * **Strict Order Enforcement:** Python parsing rules mandate that formal positional parameters must come first, followed by `*args`, and finally `**kwargs`.
-* **Forwarding Pattern:** Ideal for writing structural code like decorators, wrappers, and object-oriented class inheritance (e.g., passing dynamic initializers to a `super().__init__()` call). 
+* **Forwarding Pattern:** Ideal for writing structural code like decorators, wrappers, and object-oriented class inheritance (e.g., passing dynamic initializers to a `super().__init__()` call). -->
 
 
 *args Example - 
@@ -43,12 +43,8 @@ student(name="Amit", age=25)
 
 ---
 
-## 9. 
 
-
----
-
-## 10. Scope of Variables
+## 2. Scope of Variables
 
 ### Local Variable
 
@@ -79,7 +75,7 @@ def increase():
 
 ---
 
-## 11. Recursive Functions
+## 3. Recursive Functions
 
 ### Factorial
 
@@ -105,7 +101,7 @@ def fibonacci(n):
 
 ---
 
-## 12. Lambda Functions
+## 4. Lambda Functions
 
 ```python
 square = lambda x: x**2
@@ -117,8 +113,8 @@ add = lambda a, b: a + b
 ```
 
 ---
-
-## 13. Higher Order Functions
+<!--
+## 5. Higher Order Functions
 
 ### Function as Argument
 
@@ -138,10 +134,10 @@ def outer():
         print("Inside Inner")
     return inner
 ```
-
+-->
 ---
 
-## 14. map(), filter(), reduce()
+## 5. map(), filter(), reduce()
 
 ### map()
 
@@ -171,7 +167,7 @@ result = reduce(lambda a,b:a+b, [1,2,3,4])
 3. Multiply all values using reduce().
 
 ---
-
+<!--
 ## 15. Closures
 
 ```python
@@ -347,8 +343,8 @@ def test(a=[]):
 Predict the output.
 
 ---
-
-## 24. Mini Projects
+-->
+## Mini Projects
 
 ### Calculator
 - Addition
