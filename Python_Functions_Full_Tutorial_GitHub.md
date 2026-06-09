@@ -38,8 +38,8 @@ student(name="Amit", age=25)
 
 
 ### Practice
-1. Find average using *args.
-2. Find maximum value using *args.
+1. Find average using *args. Sample I/O - `10, 20, 30, 40`, Output - `25.0`
+2. Find maximum value using *args.  Sample I/O - `4, 12, 85, 21, 6`, Output - `85`
 3. Write a function called build_config(*args, kwargs) that accepts:
    - An arbitrary number of dictionaries (*args).
    - An arbitrary number of explicit keyword arguments (kwargs).
