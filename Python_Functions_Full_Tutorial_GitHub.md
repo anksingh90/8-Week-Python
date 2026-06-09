@@ -137,8 +137,9 @@ def factorial(n):
     if n == 1:
         return 1
     return n * factorial(n - 1)
-```
-The function calls are stored in the call stack until the base case is reached.
+```  
+The function calls are stored in the call stack until the base case is reached.  
+
 ---
 
 ## Recursive Functions in Python
