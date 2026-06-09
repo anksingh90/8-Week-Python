@@ -1,7 +1,7 @@
 
 # Python Functions - 
-
-## 1. Variable Length Arguments (Arguments (*args) & Keyword Variable Arguments (**kwargs))
+<details> 
+<summary>## 1. Variable Length Arguments (Arguments (*args) & Keyword Variable Arguments (**kwargs))</summary>
 
 ### Differences Between Them - 
 
@@ -63,7 +63,7 @@ user_layer = {"debug": False, "profile": "developer"}
 }
 
 ```
-
+</details> 
 
 ---
 
