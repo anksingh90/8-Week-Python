@@ -280,14 +280,31 @@ Iteration is faster and uses less memory because it avoids repeated function cal
 
 ## 4. Lambda Functions
 
-```python
-square = lambda x: x**2
-print(square(5))
-```
+<details> 
+<summary>Lambda Function</summary>
+
+It is a small `anonymous` function defined using the `lambda` keyword.  
+It can have any number of arguments but only one expression.
 
 ```python
-add = lambda a, b: a + b
+lambda arguments(variable holding value): expression
 ```
+Q1 : Using Lambda function, find the square of x.
+<details> 
+<summary>Code  : </summary>
+
+```python
+square = lambda x: x ** 2
+print(square(5))
+```
+In this expression  :  
+- square : name of function for calling purpose  
+- `x ** 2` : expression  
+- `x` : holding output value from expression  
+
+</details>
+
+</details>
 
 ---
 <!--
