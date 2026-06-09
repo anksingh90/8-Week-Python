@@ -101,15 +101,56 @@ def increase():
 
 ## 3. Recursive Functions
 
-### Factorial
+A recursive function is a function that calls itself to solve a smaller version of the same problem.
+
+Every recursive function should have : 
+- ### Base case  – 
+      a condition that stops the recursion.
+- ### Recursive case  – 
+      where the function calls itself.
+
+### Example 1: Factorial
+
+Factorial of `n` :  
+`5! = 5 × 4 × 3 × 2 × 1`  
+`0! = 1`  
+
+Code -
+```python
+def factorial(n):
+    return n * factorial(n - 1)   # function calls itself
+```
+How Recursion Works -  
+For `factorial(4)`:  
+```
+Step 1 : factorial(4)       # function called first time
+Step 2 : = 4 * factorial(3)  
+Step 3 : = 4 * 3 * factorial(2)  
+Step 4 : = 4 * 3 * 2 * factorial(1)  
+Step 5 : = 4 * 3 * 2 * 1  
+Step 6 : = 24
+```
 
 ```python
+# Sample Code 2 -
 def factorial(n):
     if n == 1:
         return 1
     return n * factorial(n - 1)
 ```
+The function calls are stored in the call stack until the base case is reached.
+---
 
+## Recursive Functions in Python
+
+### Advantages and Disadvantages
+
+| Aspect | Details |
+| :--- | :--- |
+| **Advantages** | • Makes code shorter and cleaner.<br>• Ideal for tree traversal.<br>• Ideal for graph algorithms.<br>• Ideal for divide-and-conquer algorithms.<br>• Ideal for backtracking. |
+| **Disadvantages** | • Uses more memory due to the call stack.<br>• Can be slower than loops.<br>• Too many recursive calls cause `RecursionError: maximum recursion depth exceeded`. |
+
+---
 ### Fibonacci
 
 ```python
