@@ -162,8 +162,9 @@ Fibonacci Sequence : `0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...`
 Now try to solve Fibonacci series and find sum of first 5 digits.
 
 <details> 
-<summary>Fibonacci explanation</summary>
-    Method 1: Using Recursion : 
+<summary>Fibonacci Series explanation</summary>
+
+### Method 1: Using Recursion : 
     
 ```python
 def fibonacci(n):
@@ -174,7 +175,65 @@ def fibonacci(n):
 print(fibonacci(6))
 ```
 
-How the Recursive Function Works - 
+### How the Recursive Function Works - 
+When we call:
+`fibonacci(6)`  
+Execution :  
+`fibonacci(6) = fibonacci(5) + fibonacci(4)`  
+`fibonacci(5) = fibonacci(4) + fibonacci(3)`  
+`fibonacci(4) = fibonacci(3) + fibonacci(2)`  
+`fibonacci(3) = fibonacci(2) + fibonacci(1)`  
+`fibonacci(2) = fibonacci(1) + fibonacci(0)`  
+
+### Base Cases : 
+`fibonacci(0) = 0`  
+`fibonacci(1) = 1`  
+
+Values on each round :  
+
+```
+fibonacci(6) = fibonacci(5) + fibonacci(4)  # f(6) = 5 + 3 = 8  
+fibonacci(5) = fibonacci(4) + fibonacci(3)  # f(5) = 3 + 2 = 5  
+fibonacci(4) = fibonacci(3) + fibonacci(2)  # f(4) = 2 + 1 = 3  
+fibonacci(3) = fibonacci(2) + fibonacci(1)  # f(3) = 1 + 1 = 2
+fibonacci(2) = fibonacci(1) + fibonacci(0)  # f(2) = 1 + 0 = 1
+```
+### Recursion Tree : 
+```text
+                    fib(5)
+                  /        \
+             fib(4)       fib(3)
+            /     \       /    \
+       fib(3) fib(2) fib(2) fib(1)
+        / \      / \    / \
+   fib(2) fib(1)1   0  1   0
+    / \
+   1   0
+```
+- Recursive Fibonacci is Slow  
+- fib(n) is calculated multiple times on each step  
+Example -  
+```text
+fib(5)
+├── fib(4)
+│   └── fib(3)
+└── fib(3)
+```
+
+---
+### Method 2 : Iterative Fibonacci
+```python
+def fibonacci(n):
+    a = 0
+    b = 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+print(fibonacci(6))
+```  
+Working of Iterative Method : 
+1. Initial values : `a = 0 b = 1`
+2. 
 
 
 </details>
