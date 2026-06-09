@@ -119,6 +119,8 @@ Code -
 ```python
 def factorial(n):
     return n * factorial(n - 1)   # function calls itself
+
+factorial(4)
 ```
 How Recursion Works -  
 For `factorial(4)`:  
@@ -134,7 +136,7 @@ Step 6 : = 24
 ```python
 # Sample Code 2 -
 def factorial(n):
-    if n == 1:
+    if n == 1:        # checks if number is 1
         return 1
     return n * factorial(n - 1)
 ```  
@@ -142,7 +144,7 @@ The function calls are stored in the call stack until the base case is reached.
 
 ---
 
-## Recursive Functions in Python
+### Recursive Functions in Python
 
 ### Advantages and Disadvantages
 
@@ -152,14 +154,30 @@ The function calls are stored in the call stack until the base case is reached.
 | **Disadvantages** | • Uses more memory due to the call stack.<br>• Can be slower than loops.<br>• Too many recursive calls cause `RecursionError: maximum recursion depth exceeded`. |
 
 ---
-### Fibonacci
+### Example 2: Fibonacci Series
 
+- The Fibonacci Series is a sequence of numbers where each number is the sum of the previous two numbers.
+Fibonacci Sequence : `0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...`
+
+Now try to solve Fibonacci series and find sum of first 5 digits.
+
+<details> 
+<summary>Fibonacci explanation</summary>
+    Method 1: Using Recursion : 
+    
 ```python
 def fibonacci(n):
-    if n <= 1:
+    if n <= 1:        # checking if value is less than or equal to 1
         return n
-    return fibonacci(n-1) + fibonacci(n-2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(fibonacci(6))
 ```
+
+How the Recursive Function Works - 
+
+
+</details>
 
 ### Practice
 1. Recursive sum of first n numbers.
