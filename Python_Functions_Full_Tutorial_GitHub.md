@@ -1,7 +1,8 @@
 
 # Python Functions - 
+## 1. Variable Length Arguments (Arguments (*args) & Keyword Variable Arguments (**kwargs))
 <details> 
-<summary>### 1. Variable Length Arguments (Arguments (*args) & Keyword Variable Arguments (**kwargs))</summary>
+<summary> *args & **kwargs </summary>
 
 ### Differences Between Them - 
 
