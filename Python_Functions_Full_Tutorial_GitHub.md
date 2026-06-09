@@ -40,6 +40,30 @@ student(name="Amit", age=25)
 ### Practice
 1. Find average using *args.
 2. Find maximum value using *args.
+3. Write a function called build_config(*args, kwargs) that accepts:
+   - An arbitrary number of dictionaries (*args).
+   - An arbitrary number of explicit keyword arguments (kwargs).
+
+The function should merge all dictionaries from left to right. Finally, any explicit keyword arguments passed via kwargs must overwrite the values accumulated from the dictionaries.
+
+```python
+# Sample Inputs : 
+default_layer = {"host": "localhost", "port": 8080, "secure": False}
+env_layer = {"port": 9000, "debug": True}
+user_layer = {"debug": False, "profile": "developer"}
+
+# Output : 
+{
+    'host': 'localhost', 
+    'port': 9000, 
+    'secure': True, 
+    'debug': False, 
+    'profile': 'developer', 
+    'timeout': 30
+}
+
+```
+
 
 ---
 
@@ -369,7 +393,7 @@ Predict the output.
 - Bonus Calculation
 
 ---
-
+<!--
 # Mastery Checklist
 
 - Function Creation
@@ -393,3 +417,4 @@ Predict the output.
 - Generators
 - Nested Functions
 - Advanced Function Concepts
+-->
