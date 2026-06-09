@@ -243,11 +243,33 @@ def fibonacci(n):
     return a
 print(fibonacci(6))
 ```  
-Working of Iterative Method : 
-1. Initial values : `a = 0 b = 1`
-2. 
+Working of Iterative Method :  
+Initial values : `a = 0 b = 1`  
+Iteration `1` : `a = 1(value of b)  b = 1(a+b)`  
+Iteration `2` : `a = 1(value of b)  b = 2(a+b)`  
+..  
+...  
+....  
+Iteration `6` : `a = 8(value of b)  b = 13(a = 5 + b = 8)`  
 
-
+### Important Questions  
+Q1. What is the base case in recursive Fibonacci ?
+<!-- 
+```python
+if n <= 1:
+    return n
+```
+-->
+Q2. Why do we need a base case?
+<!-- 
+Without a base case, the function would keep calling itself forever and result in:
+```python
+RecursionError: maximum recursion depth exceeded
+```
+-->
+Q3. Which is faster: recursion or iteration?
+<!-- 
+Iteration is faster and uses less memory because it avoids repeated function calls and call stack overhead.-->
 </details>
 
 ### Practice
