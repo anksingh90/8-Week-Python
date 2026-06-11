@@ -882,11 +882,12 @@ print(a, b, c)  # 1 2 3
 # Must match count exactly
 # a, b = [1, 2, 3]  # ValueError: too many values to unpack
 
-# Extended unpacking with *
+# Unpacking with *    |        index[0] holds first index value    |        *rest hold rest of list value
 first, *rest = [1, 2, 3, 4, 5]
 print(first)  # 1
 print(rest)   # [2, 3, 4, 5]
 
+# Unpacking with *    |        *start holds all the value          |        last holds last index value
 *start, last = [1, 2, 3, 4, 5]
 print(start)  # [1, 2, 3, 4]
 print(last)   # 5
@@ -906,14 +907,6 @@ point = [3, 7]
 x, y = point
 print(f"x={x}, y={y}")
 
-# Ignoring values with _
-_, second, _ = [10, 20, 30]
-print(second)  # 20
-
-# Unpacking in for loop
-pairs = [(1, "one"), (2, "two"), (3, "three")]
-for number, word in pairs:
-    print(f"{number} = {word}")
 ```
 
 ---
@@ -921,13 +914,13 @@ for number, word in pairs:
 ## 15. zip(), map(), filter() with Lists
 
 ```python
-# zip() — combine multiple lists element by element
+# zip() — combine multiple lists element by index value
 names = ["Alice", "Bob", "Charlie"]
 scores = [85, 92, 78]
 grades = ["B", "A", "C"]
 
-combined = list(zip(names, scores))
-print(combined)  # [('Alice', 85), ('Bob', 92), ('Charlie', 78)]
+obj = list(zip(names, scores))    # type casting as list data type
+print(obj)  # [('Alice', 85), ('Bob', 92), ('Charlie', 78)]
 
 for name, score, grade in zip(names, scores, grades):
     print(f"{name}: {score} ({grade})")
@@ -935,33 +928,42 @@ for name, score, grade in zip(names, scores, grades):
 # zip stops at shortest list
 a = [1, 2, 3]
 b = [10, 20]
-print(list(zip(a, b)))  # [(1, 10), (2, 20)]  — 3 is ignored
+print(list(zip(a, b)))  # [(1, 10), (2, 20)] ,  3 is ignored
 
-# Unzip using zip(*list)
+# Unzip using zip(*list) or unpacking 
 zipped = [(1, "a"), (2, "b"), (3, "c")]
 numbers, letters = zip(*zipped)
 print(numbers)  # (1, 2, 3)
 print(letters)  # ('a', 'b', 'c')
 
-# map() — apply function to every element
+# map(function, iterable) — map function calls function and iterable data (list/tuple/set/type casting - int, float)
+
+def double(x):        # accepts numbers as argument 'x'.
+    return x * 2        # for each value of 'x', its square is returned back to map function.
+
+numbers = [1, 2, 3, 4, 5]
+doubled = list(map(double, numbers))    # calls function - double and iterable - numbers in map. Each value recevied from double gets store as list
+print(doubled)  # [2, 4, 6, 8, 10]
+---
 numbers = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x**2, numbers))
 print(squared)  # [1, 4, 9, 16, 25]
-
-# map with named function
-def double(x):
-    return x * 2
-
-doubled = list(map(double, numbers))
-print(doubled)  # [2, 4, 6, 8, 10]
+# Always returned the same length as the original list.
 
 # filter() — keep only elements that pass condition
+
+numbers = [1, 2, 3, 4, 5, 6]
+def is_even(num):
+    return num % 2 == 0
+
+result = filter(is_even, numbers)
+print(list(result))  # Output: [2, 4, 6]
+---
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 evens = list(filter(lambda x: x % 2 == 0, numbers))
 print(evens)  # [2, 4, 6, 8, 10]
 
-# Prefer list comprehensions over map/filter — more readable
-evens_comp = [x for x in numbers if x % 2 == 0]
+# Usually shorter than the original list returned.
 ```
 
 ---
@@ -980,20 +982,6 @@ print(stack.pop())  # third  — last in, first out
 print(stack.pop())  # second
 print(stack)        # ['first']
 
-# QUEUE — First In First Out (FIFO)
-# Use append() to enqueue, pop(0) to dequeue
-# WARNING: pop(0) on a list is O(n) — use collections.deque instead
-
-from collections import deque
-
-queue = deque()
-queue.append("first")
-queue.append("second")
-queue.append("third")
-
-print(queue.popleft())  # first  — first in, first out
-print(queue.popleft())  # second
-print(queue)            # deque(['third'])
 ```
 
 ---
@@ -1012,11 +1000,11 @@ print(sys.getsizeof(gen))  # ~104 bytes — generator stores formula, not values
 
 # Time complexity of common operations
 # Access by index   O(1)     — instant
-# Append            O(1)     — amortized constant
-# Insert at index   O(n)     — shifts elements
+# Append            O(1)     — amortized constant (Python over-allocates memory while declaration)
+# Insert at index   O(n)     — shifts elements (Takes more time to perform task. Because all elements needs to be shifted, it takes time)
 # Delete at index   O(n)     — shifts elements
 # Search (in)       O(n)     — checks every element
-# Sort              O(n log n)
+# Sort              O(n log n)    - exceptionally fast execution of function
 
 # Prefer set for membership check when list is large
 big_list = list(range(1_000_000))
@@ -1042,53 +1030,6 @@ print(a)     # [1, 2, 3, 4]  BUG
 
 # Fix:
 b = a.copy()
-
-# Mistake 2: Mutable default argument in function
-def add_item(item, lst=[]):  # lst=[] is created ONCE, shared across calls
-    lst.append(item)
-    return lst
-
-print(add_item("a"))  # ['a']
-print(add_item("b"))  # ['a', 'b']  — BUG: not a fresh list
-
-# Fix:
-def add_item(item, lst=None):
-    if lst is None:
-        lst = []
-    lst.append(item)
-    return lst
-
-# Mistake 3: Modifying a list while iterating over it
-numbers = [1, 2, 3, 4, 5, 6]
-for n in numbers:
-    if n % 2 == 0:
-        numbers.remove(n)  # BUG: skips elements
-
-print(numbers)  # [1, 3, 5]  — looks right but 4 was skipped!
-
-# Fix: iterate over a copy
-for n in numbers[:]:
-    if n % 2 == 0:
-        numbers.remove(n)
-
-# Better fix: list comprehension
-numbers = [n for n in numbers if n % 2 != 0]
-
-# Mistake 4: Using list instead of set for membership
-# O(n) every time — slow for large lists
-if value in [1, 2, 3, 4, 5]:  # slow
-    pass
-
-if value in {1, 2, 3, 4, 5}:  # fast — use set literal
-    pass
-
-# Mistake 5: Wrong nested list creation
-grid = [[0] * 3] * 3    # All rows are same object
-grid[0][0] = 1
-print(grid)             # [[1, 0, 0], [1, 0, 0], [1, 0, 0]]  BUG
-
-# Fix:
-grid = [[0] * 3 for _ in range(3)]
 ```
 
 ---
