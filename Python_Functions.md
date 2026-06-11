@@ -304,6 +304,51 @@ In this expression  :
 
 </details>
 
+Q2 : Write a lambda function that converts Celsius to Fahrenheit.  F = C x 1.8 + 32
+```python
+# Your lambda should accept one argument (celsius) and return the fahrenheit value.
+celsius_to_fahrenheit = # WRITE YOUR LAMBDA HERE
+
+# --- Test Cases ---
+print(celsius_to_fahrenheit(0))    # Expected Output: 32.0
+print(celsius_to_fahrenheit(100))  # Expected Output: 212.0
+print(celsius_to_fahrenheit(-40))  # Expected Output: -40.0
+```
+
+Q3 : You are given a list of mixed data types. Use Python's built-in `filter()` along with a lambda function to extract only strings that have a length greater than 3.
+```python
+raw_data = ["apple", 42, "cat", True, "python", "ok", 3.14, "code"]
+
+# Use filter() and a lambda to keep strings longer than 3 characters
+clean_strings = # WRITE YOUR CODE HERE
+
+# --- Test Case ---
+print(list(clean_strings))  # Expected Output: ['apple', 'python', 'code']
+
+```
+
+Q4. You have a list of tuples representing products in an e-commerce cart: (product_name, price).  
+Sort the list of products in descending order (highest price to lowest price) based on their price.
+
+```python
+cart = [
+    ("Wireless Mouse", 25),
+    ("Gaming Monitor", 299),
+    ("Mechanical Keyboard", 85),
+    ("USB-C Cable", 12)
+]
+
+# Use the sorted() function, passing a lambda to the 'key' parameter.
+# Remember to set reverse=True for descending order.
+sorted_cart = # WRITE YOUR CODE HERE
+
+# --- Test Case ---
+# Expected Output: [('Gaming Monitor', 299), ('Mechanical Keyboard', 85), ('Wireless Mouse', 25), ('USB-C Cable', 12)]
+print(sorted_cart)
+```
+
+
+
 </details>
 
 ---
