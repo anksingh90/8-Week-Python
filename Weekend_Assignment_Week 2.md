@@ -900,11 +900,6 @@ Always True:
 
 Roman numerals are represented by seven different symbols: **I, V, X, L, C, D and M**.
 
-**Key Rules:**
-- Negative numbers are **never palindromes** (the `-` sign changes when reversed)
-- Numbers ending in 0 are **never palindromes** (except 0 itself)
-- You must check if the number is identical when reversed
-
 | Symbol | Value |
 |---------|---------------|
 | I | 1 |
@@ -915,6 +910,13 @@ Roman numerals are represented by seven different symbols: **I, V, X, L, C, D an
 | D | 500 |
 | M | 1000 |
 
+**Key Rules :**
+
+- `I` can be placed before `V` (5) and `X` (10) to make 4 and 9. 
+- `X` can be placed before `L` (50) and `C` (100) to make 40 and 90. 
+- `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
+
+**Input / Output :**
 
 ```text
 Example 1:
