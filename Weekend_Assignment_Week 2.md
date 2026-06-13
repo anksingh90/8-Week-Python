@@ -945,26 +945,6 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 </details>
 ---
 
-## How to Use This Document
-
-1. **Read the problem** in the "What The Problem Is Asking" section
-2. **Work through examples** to understand the pattern
-3. **Study the approach hints** (don't read full solutions yet)
-4. **Attempt to code** using the template
-5. **Test with edge cases** before finalizing
-6. **Review common mistakes** to avoid them
-
----
-
-## Next Steps
-
-- Complete coding for each problem
-- Test all edge cases
-- Push solutions to GitHub with clear commit messages
-- Move to the next set of problems (arrays, strings, linked lists)
-
----
-
 **Document Version:** 1.0  
 **Created:** June 2026  
 **For:** Advanced Python Course — DSA Phase  
