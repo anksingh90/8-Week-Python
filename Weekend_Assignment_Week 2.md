@@ -16,7 +16,7 @@
 
 # 1. Two Sum
 
-<detail>  
+<details>  
 **Difficulty:** Easy  
 **Topics:** Hash Map, Arrays, List  
 
@@ -188,7 +188,7 @@ print(twoSum([3, 3], 6))              # Expected: [0, 1]
 
 ---
 
-</detail>
+</details>
 
 ---
 
