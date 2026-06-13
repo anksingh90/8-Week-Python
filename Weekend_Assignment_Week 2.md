@@ -334,15 +334,15 @@ RIGHT: Position 0 + Position 1 + Position 2 (different positions)
 
 ## Step-by-Step Algorithm (Simple Version)
 
-```
+```text
 Step 1: Sort the array
 Step 2: For each number in the array (fix it as first number)
-        Step 3: Use two pointers to find 2 more numbers
-                - Left pointer starts after current number
-                - Right pointer starts at the end
-                - If sum == 0, add to answer and skip duplicates
-                - If sum < 0, move left pointer right (increase sum)
-                - If sum > 0, move right pointer left (decrease sum)
+Step 3: Use two pointers to find 2 more numbers
+      - Left pointer starts after current number
+      - Right pointer starts at the end
+      - If sum == 0, add to answer and skip duplicates
+      - If sum < 0, move left pointer right (increase sum)
+      - If sum > 0, move right pointer left (decrease sum)
 Step 4: Return all unique triplets
 ```
 
@@ -350,7 +350,7 @@ Step 4: Return all unique triplets
 
 ## Detailed Walkthrough with Example 1
 
-```
+```python
 Original: nums = [-1, 0, 1, 2, -1, -4]
 
 Step 1: Sort
@@ -889,6 +889,58 @@ Always True:
 
 ---
 
+# 4. Roman to Integer
+
+<details>
+
+**Difficulty:** Easy  
+**Topics:** Math, Strings (optional)  
+
+## What The Problem Is Asking
+
+Roman numerals are represented by seven different symbols: **I, V, X, L, C, D and M**.
+
+**Key Rules:**
+- Negative numbers are **never palindromes** (the `-` sign changes when reversed)
+- Numbers ending in 0 are **never palindromes** (except 0 itself)
+- You must check if the number is identical when reversed
+
+| Symbol | Value |
+|---------|---------------|
+| I | 1 |
+| V | 5 |
+| X | 10 |
+| L | 50 |
+| C | 100 |
+| D | 500 |
+| M | 1000 |
+
+
+```text
+Example 1:
+
+Input: s = "III"
+Output: 3
+Explanation: III = 3.
+
+Example 2:
+
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+
+Example 3:
+
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+```
+
+
+
+
+
+</details>
 ---
 
 ## How to Use This Document
@@ -915,3 +967,4 @@ Always True:
 **Created:** June 2026  
 **For:** Advanced Python Course — DSA Phase  
 **Last Updated:** 2026
+
