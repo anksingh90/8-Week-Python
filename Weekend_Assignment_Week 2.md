@@ -16,9 +16,9 @@
 
 # 1. Two Sum
 
-**LeetCode ID:** 1  
+<detail>
 **Difficulty:** Easy  
-**Topics:** Hash Map, Arrays  
+**Topics:** Hash Map, Arrays, List  
 
 ## What The Problem Is Asking
 
@@ -187,6 +187,8 @@ print(twoSum([3, 3], 6))              # Expected: [0, 1]
 | Only checking adjacent elements | Pair could be anywhere in the list | Check all combinations |
 
 ---
+
+</detail>
 
 ---
 
