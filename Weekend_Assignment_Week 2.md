@@ -882,8 +882,10 @@ Always True:
 - Numbers that read same forwards and backwards (121, 1221, 12321)
 ```
 
----
 </details>
+
+---
+
 ---
 
 ## How to Use This Document
