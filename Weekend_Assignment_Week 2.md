@@ -194,7 +194,7 @@ print(twoSum([3, 3], 6))              # Expected: [0, 1]
 
 # 2. Three Sum
 
-**LeetCode ID:** 15  
+<details>  
 **Difficulty:** Medium  
 **Topics:** Hash Map, Arrays, Sorting, Two Pointers  
 
@@ -484,12 +484,12 @@ print(threeSum([0, 0, 0]))              # [[0, 0, 0]]
 | Approach | Hash map | Sort + Two pointers |
 
 ---
-
+</details>
 ---
 
 # 3. Palindrome Number
 
-**LeetCode ID:** 9  
+<details>  
 **Difficulty:** Easy  
 **Topics:** Math, Strings (optional)  
 
@@ -883,7 +883,7 @@ Always True:
 ```
 
 ---
-
+</details>
 ---
 
 ## How to Use This Document
