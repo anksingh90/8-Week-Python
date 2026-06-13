@@ -1,7 +1,7 @@
 # LeetCode Problems — Simple English Explanations
 
 **For:** CBSE Class 12 → BTech Students  
-**Purpose:** Understanding LeetCode problems in plain language before coding  
+**Purpose:** Understanding Interview problems in plain language before coding  
 **Level:** Beginner to Intermediate DSA  
 
 ---
@@ -14,7 +14,7 @@
 
 ---
 
-# Two Sum
+#1. Two Sum
 
 **LeetCode ID:** 1  
 **Difficulty:** Easy  
@@ -190,7 +190,7 @@ print(twoSum([3, 3], 6))              # Expected: [0, 1]
 
 ---
 
-# Three Sum
+#2. Three Sum
 
 **LeetCode ID:** 15  
 **Difficulty:** Medium  
@@ -485,7 +485,7 @@ print(threeSum([0, 0, 0]))              # [[0, 0, 0]]
 
 ---
 
-# Palindrome Number
+#3. Palindrome Number
 
 **LeetCode ID:** 9  
 **Difficulty:** Easy  
