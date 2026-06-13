@@ -16,7 +16,7 @@
 
 # 1. Two Sum
 
-<detail>
+<detail>  
 **Difficulty:** Easy  
 **Topics:** Hash Map, Arrays, List  
 
