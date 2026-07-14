@@ -1,6 +1,6 @@
-**Question 1: The E-Commerce Inventory System (Table-per-Hierarchy Strategy)**
-**Objective:** Design a product inventory system using inheritance where a parent class and its child classes share a single database table, utilizing a "discriminator" column to identify the product type.
-**Scenario:** An online store sells two types of products: Physical Books and Digital Software. All products have a title and a price. Books require a weight attribute (for shipping fees), while Software requires a file size attribute (for download allocation).
+**Question 1: The E-Commerce Inventory System (Table-per-Hierarchy Strategy)**  
+**Objective:** Design a product inventory system using inheritance where a parent class and its child classes share a single database table, utilizing a "discriminator" column to identify the product type.  
+**Scenario:** An online store sells two types of products: Physical Books and Digital Software. All products have a title and a price. Books require a weight attribute (for shipping fees), while Software requires a file size attribute (for download allocation).  
 
 ---
 
@@ -26,9 +26,9 @@
 
 ---  
 
-**Question 2: Corporate Payroll & Foreign Key Relationships (Table-per-Class Strategy)**
-**Objective:** Implement class inheritance that maps directly to a normalized, multi-table database schema using foreign key constraints to link parent and child data.
-**Scenario:** A company tracks its staff using an inheritance structure. All workers are `Employees`, but some are specialized `Managers`.
+**Question 2: Corporate Payroll & Foreign Key Relationships (Table-per-Class Strategy)**  
+**Objective:** Implement class inheritance that maps directly to a normalized, multi-table database schema using foreign key constraints to link parent and child data.  
+**Scenario:** A company tracks its staff using an inheritance structure. All workers are `Employees`, but some are specialized `Managers`.  
 
 **Task Requirements:**
 1. **OOP Design :**  
