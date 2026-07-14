@@ -1,0 +1,7 @@
+myconn = open('book_1.txt','w')
+myconn.write('The Hunger Games\n')
+myconn.write('Harry Potter\n')
+myconn.write('To Kill a Mockingbird\n')
+myconn.write('The Lord of the Rings\n')
+myconn.write('The Great Gatsby\n')
+myconn.write('The Fault in Our Stars\n')

@@ -1,0 +1,10 @@
+2024-03-10 09:12:01 INFO User login: alice
+2024-03-10 09:13:45 ERROR Failed to read config file
+2024-03-10 09:14:02 INFO Server started on port 8080
+2024-03-10 09:15:30 INFO Cache cleared
+2024-03-10 09:16:11 ERROR Database connection timed out
+2024-03-10 09:17:05 INFO Backup completed
+2024-03-10 09:18:42 ERROR Unhandled exception in payment
+2024-03-10 09:19:00 INFO User login: bob
+2024-03-10 09:20:15 INFO Scheduled job completed
+2024-03-10 09:21:33 ERROR Service health check failed
