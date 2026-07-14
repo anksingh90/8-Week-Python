@@ -1,6 +1,6 @@
 # Class method
 # Add a method of the Class Car that displays the full name of the car (brand & model)
-# Store details - Brand, Model, Time_Of_Entry into DB. 
+# Store details - Brand, Model, Time_Of_Entry into DB. ICE - Petrol/Desiel
 
 class Car:
     def __init__(self, ubrand, umodel): # declaration of variables
