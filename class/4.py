@@ -11,7 +11,7 @@ class Car:
         return f"Car {self.brand} , Model : {self.model}"
 
     def fuel_type(self):
-        return "Petrol Fuel !"
+        return "Petrol or Diesel Fuel !"
 
 
 class ElectricCar(Car):
@@ -22,10 +22,9 @@ class ElectricCar(Car):
     def fuel_type(self):
         return "Electric Charge"
 
-# Corrected: Pass three arguments
+
 e_car = ElectricCar('Tata', 'TiagoEV', '50kWh')
 print(e_car.fuel_type())
 
-# Fixed: Added battery size '40kWh' and fixed print variable
 nexon = Car('Tata', 'Nexon')
 print(nexon.fuel_type())
