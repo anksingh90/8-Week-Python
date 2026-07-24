@@ -1,103 +1,89 @@
-# 8-Week Python Tutorial
+# 8-Week Python
 
-Welcome to the **8-Week Python Tutorial** repository! This comprehensive guide is designed to take you from Python basics to more advanced concepts over an 8-week learning journey.
+This repository is a hands-on Python learning workspace for beginners and intermediate learners. It contains tutorial notes, practice exercises, classroom examples, notebooks, and small projects that cover core Python concepts.
 
-## 📚 Course Overview
+## What this repository includes
 
-This tutorial covers essential Python programming concepts, starting from fundamental data structures and progressing through more advanced topics. Each week focuses on specific concepts with practical examples and exercises.
+- Beginner-friendly markdown tutorials for lists, tuples, functions, and collections
+- Object-oriented programming notes and practice exercises
+- File handling and context manager examples
+- Decorator examples
+- Data structures and algorithm practice
+- Mini-projects and simple Python scripts
+- Sample database and log files for practical learning
 
-## 📅 Course Structure
+## Main topics covered
 
-### **Week 1: Python Data Structures**
-1. [**Lists**](./python_lists_tutorial.md) - Learn about ordered, mutable collections
-   - Creating and manipulating lists
-   - List methods and operations
-   - List comprehensions
-   
-2. [**Tuples**](./python_tuples_tutorial.md) - Master immutable sequences
-   - Creating and using tuples
-   - Tuple unpacking
-   - When to use tuples vs lists
+1. Lists and tuples
+2. Functions and recursion
+3. Dictionaries, sets, strings, and collections
+4. Object-oriented programming (OOP)
+5. File handling and context managers
+6. Decorators
+7. Data structures and algorithms
+8. Small projects and assignments
 
-### **Weeks 2-8: Coming Soon**
-Additional weeks will cover more advanced Python topics and concepts.
+## Core tutorial files
 
-## 🚀 Getting Started
+- [1. python_lists_tutorial.md](1.%20python_lists_tutorial.md)
+- [2. python_tuples_tutorial.md](2.%20python_tuples_tutorial.md)
+- [3. Python_Functions.md](3.%20Python_Functions.md)
+- [4. Python_Tuples_Dictionaries_Sets_Strings_Collections_Tutorial.md](4.%20Python_Tuples_Dictionaries_Sets_Strings_Collections_Tutorial.md)
+- [5. OOPS.md](5.%20OOPS.md)
+- [5. OOPS_New.md](5.%20OOPS_New.md)
+- [Class_Practice_QnA.md](Class_Practice_QnA.md)
+- [Class 12_File_Handling_Text_File_Practice_Questions.md](Class%2012_File_Handling_Text_File_Practice_Questions.md)
+- [Week 18_Jul_MiniProject_SchoolManagementSystem.md](Week%2018_Jul_MiniProject_SchoolManagementSystem.md)
+- [Weekend_Assignment_Week 1.md](Weekend_Assignment_Week%201.md)
+- [Weekend_Assignment_Week 2.md](Weekend_Assignment_Week%202.md)
 
-### Prerequisites
-- Python 3.7 or higher installed on your system
-- A code editor (VS Code, PyCharm, etc.)
-- Basic computer literacy
+## Folder structure
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/anksingh90/8-Week-Python.git
-   cd 8-Week-Python
-   ```
-
-2. Ensure Python is installed:
-   ```bash
-   python --version
-   ```
-
-## 📖 How to Use This Repository
-
-1. Navigate to each week's directory
-2. Review the tutorial files
-3. Run the examples:
-   ```bash
-   python filename.py
-   ```
-4. Practice the exercises and modify code to experiment
-
-## 📝 Learning Tips
-
-- **Read through the tutorials** - Start with the basic concepts
-- **Run the examples** - Execute the code to see how it works
-- **Experiment** - Modify the examples and see what happens
-- **Practice** - Complete exercises and try to build small projects
-- **Review** - Revisit concepts as needed before moving forward
-
-## 🎯 Learning Outcomes
-
-By the end of this 8-week course, you will be able to:
-- Understand and work with fundamental Python data structures
-- Write clean, efficient Python code
-- Solve problems using Python
-- Progress toward more advanced programming concepts
-
-## 📂 Repository Structure
-
-```
+```text
 8-Week-Python/
-├── README.md
-├── Week_1/
-│   ├── Lists.py (or .md)
-│   └── Tuples.py (or .md)
-├── Week_2/
-│   └── (Coming soon)
-└── ...
+├── class/                # Classroom practice scripts
+├── context_manager/      # Context manager and file/database examples
+├── decorators/           # Decorator examples
+├── dsa/                  # Data structures and algorithms practice
+├── list/                 # List-related exercises
+├── prj/                  # Mini-projects
+└── *.md                  # Tutorial notes and assignments
 ```
 
-## 💡 Additional Resources
+## Suggested learning path
+
+1. Start with the markdown tutorials in the root folder.
+2. Practice the examples in the relevant folders.
+3. Work through the assignments and mini-projects.
+4. Use the Python scripts and notebooks to reinforce what you learn.
+
+## How to use this repo
+
+- Open the markdown files first for theory and explanations.
+- Run the Python files with:
+
+```bash
+python <filename>.py
+```
+
+- If you want to explore notebooks, open the .ipynb files in VS Code or Jupyter.
+
+## Requirements
+
+- Python 3.x installed
+- VS Code or any Python-friendly editor
+- Basic familiarity with terminal commands is helpful
+
+## Useful links
 
 - [Python Official Documentation](https://docs.python.org/3/)
-- [Python.org Tutorials](https://wiki.python.org/moin/BeginnersGuide)
 - [Real Python](https://realpython.com/)
+- [W3Schools Python Tutorial](https://www.w3schools.com/python/)
 
-## 🤝 Contributing
+## Notes
 
-If you find any errors or have suggestions for improvement, feel free to open an issue or submit a pull request.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## ⭐ Acknowledgments
-
-Thank you for your interest in learning Python! Happy coding!
+- This repository contains both an older OOP note and a newer OOP version. Both are useful for comparing learning styles and content.
+- Some files are practice-oriented, so feel free to experiment and modify them.
 
 ---
-
-**Last Updated:** June 2026
+Last updated: July 2026
