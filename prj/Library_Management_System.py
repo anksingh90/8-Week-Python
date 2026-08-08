@@ -19,12 +19,12 @@ class Book:
 
     def __repr__(self):
         return (f"Book(isbn='{self.isbn}', "
-                f"title='{self.title}', "
-                f"author='{self.author}', "
-                f"genre='{self.genre}', "
-                f"total={self.total}, "
-                f"available={self.available})")
-
+                f"Title = '{self.title}', "
+                f"Author = '{self.author}', "
+                f"Genre = '{self.genre}', "
+                f"Total = {self.total}, "
+                f"Available = {self.available})")
+ 
     def __eq__(self, other):
         return self.isbn == other.isbn
 
