@@ -45,6 +45,10 @@ node_a2 = List(2, node_a3)  # variable node_a2 holds - 2 & points next node to n
 lst1 = List(1, node_a2)     # declared list lst1 : hold first value - 1 & points next node to node_a2
 
 # Same Building lst2: 1 -> 3 -> 4
+# node_b3 = List(4) (Creates the tail)
+# node_b2 = List(3, node_b3) (Creates the middle link, points it to the tail)
+# lst2 = List(1, node_b2) (Creates the head, points it to the middle link)
+
 node_b3 = List(4)
 node_b2 = List(3, node_b3)
 lst2 = List(1, node_b2)
