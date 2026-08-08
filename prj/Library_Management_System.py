@@ -7,7 +7,9 @@ DB = "library.db"
 class Book:
 
     def __init__(self,isbn,title,author,genre,total,available):  
-        self.isbn = isbn
+        # Enforcing types here prevents silent bugs later on. 
+        # Casting isbn to a string fixes the INTEGER vs VARCHAR mismatch we noticed earlier!
+        self.isbn = isbn        # recommendation - self.isbn = str(isbn)
         self.title = title
         self.author = author
         self.genre = genre
@@ -15,9 +17,11 @@ class Book:
         self.available = available
 
     def __str__(self):
+        # User-facing output (triggered when you write: print(book))
         return f"{self.title} by {self.author} (Available: {self.available}/{self.total})"
 
     def __repr__(self):
+        # Developer-facing output (helpful for debugging in the terminal)
         return (f"Book(isbn='{self.isbn}', "
                 f"Title = '{self.title}', "
                 f"Author = '{self.author}', "
@@ -26,27 +30,49 @@ class Book:
                 f"Available = {self.available})")
  
     def __eq__(self, other):
+        # Compare this(self) book against another(other) object using the unique ISBN
         return self.isbn == other.isbn
 
+    # Adding new method
+    # A clean way to check availability without exposing the raw logic everywhere 
+    @property
+    def is_available(self):
+        return self.available > 0
 
 # ---------------- MEMBER CLASS ----------------
 
 class Member:
 
     def __init__(self, member_id, name, email, join_date, library=None):
+        # Type casting ensures consistent data handling
         self.member_id = member_id
         self.name = name
         self.email = email
         self.join_date = join_date
+
+        # Pass the library instance, so the member can query its own transactions
         self.library = library
 
     def __str__(self):
+        # String representation for the user
         return f"Member: {self.name} (ID: {self.member_id})"
+
+    # added new method !
+    def __repr__(self):
+        return (f"Member(member_id={self.member_id}, name='{self.name}', "
+                f"email='{self.email}', join_date='{self.join_date}')")
+
+    # Added new method
+    # To check if two variables refer to the exact same member by comparing their unique member_id
+    # Allows to compare two members: member1 == member2
+    def __eq__(self, other):
+        if isinstance(other, Member):
+            return self.member_id == other.member_id
+        return False
 
     @property
     def borrowed_count(self):
-
-        if self.library is None:
+        if self.library is None:        # Dynamic property querying the database.
             return 0
 
         cur = self.library.conn.cursor()
@@ -66,32 +92,35 @@ class Member:
 class Library:
 
     def __init__(self, db=DB):
-
+        # The constructor to establishes the initial state of the object.
+        # It opens the connection to SQLite and triggers table creation immediately.
         self.conn = sqlite3.connect(db)
         self.books = []
-        self.i = 0
+        self.i = 0      # Manual counter
         self.create_tables()
 
     @classmethod
-    def from_database(cls, db):
+    def from_database(cls, db):     # Alternative constructor: creates a Library object from database data.
         return cls(db)
 
+    # This method makes the Library "iterable", use it in a for-loop.
     def __iter__(self):
-        self.load_books()
+        self.load_books()       # Loads the data from the database and resets counter (self.i) to 0.
         self.i = 0
         return self
 
     def __next__(self):
-
+        # This works hand-in-hand with __iter__. Every time the for-loop loops, 
+        # it calls __next__ to get the next item, until it hits StopIteration.
         if self.i >= len(self.books):
             raise StopIteration
-
+        
         book = self.books[self.i]
         self.i += 1
         return book
 
     def __len__(self):
-
+        # it queries the database directly for an accurate, real-time count of total rows.
         cur = self.conn.cursor()
         cur.execute("SELECT COUNT(*) FROM books")
         return cur.fetchone()[0]
