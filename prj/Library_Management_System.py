@@ -4,9 +4,11 @@ import sqlite3
 DB = "library.db"
 
 # ---------------- BOOK CLASS ----------------
+# addition of new entries : error
+
 class Book:
 
-    def __init__(self,isbn,title,author,genre,total,available):  
+    def __init__(self,isbn,title,author,genre,total,available):   # number or it can be none.
         # Enforcing types here prevents silent bugs later on. 
         # Casting isbn to a string fixes the INTEGER vs VARCHAR mismatch we noticed earlier!
         self.isbn = isbn        # recommendation - self.isbn = str(isbn)
